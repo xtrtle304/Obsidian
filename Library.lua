@@ -9903,7 +9903,7 @@ do
 			FontFace = ElementFont,
 			Position = UDim2.fromScale(0, 1),
 			Size = UDim2.new(1, 0, 0, 30),
-			Text = "Manage Elements",
+			Text = "    Manage Elements",
 			TextColor3 = Color3.new(1, 1, 1),
 			TextSize = 14,
 			TextTransparency = 0.4,
@@ -9913,9 +9913,9 @@ do
 			Parent = Box,
 		})
 
-		local TextWidthOk, TextWidth = pcall(function()
-			return (Library:GetTextBounds(ManageButton.Text, ElementFont, 14, 10000))
-		end)
+		-- local TextWidthOk, TextWidth = pcall(function()
+		-- 	return (Library:GetTextBounds(ManageButton.Text, ElementFont, 14, 10000))
+		-- end)
 
 		-- cog sits just left of the centred text
 		New("ImageLabel", {
@@ -9925,7 +9925,7 @@ do
 			ImageRectOffset = CogRectOffset,
 			ImageRectSize = CogRectSize,
 			ImageTransparency = 0.4,
-			Position = UDim2.new(0.5, -((TextWidthOk and TextWidth or 100) / 2) - 6, 0.5, 0),
+			Position = UDim2.new(0.5, -43, 0.5, 0),
 			Size = UDim2.fromOffset(22, 22),
 			ZIndex = ManageButton.ZIndex,
 			Parent = ManageButton,
